@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D90AFC191F14E08B00C65DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AFC181F14E08B00C65DEC /* AppDelegate.swift */; };
+		D90AFC1B1F14E08C00C65DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AFC1A1F14E08C00C65DEC /* ViewController.swift */; };
+		D90AFC1E1F14E08C00C65DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90AFC1C1F14E08C00C65DEC /* Main.storyboard */; };
+		D90AFC211F14E08C00C65DEC /* SOSIMPLE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D90AFC1F1F14E08C00C65DEC /* SOSIMPLE.xcdatamodeld */; };
+		D90AFC231F14E08C00C65DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90AFC221F14E08C00C65DEC /* Assets.xcassets */; };
+		D90AFC261F14E08C00C65DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90AFC241F14E08C00C65DEC /* LaunchScreen.storyboard */; };
+		D90AFC311F14E08C00C65DEC /* SOSIMPLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AFC301F14E08C00C65DEC /* SOSIMPLETests.swift */; };
+		D90AFC3C1F14E08C00C65DEC /* SOSIMPLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AFC3B1F14E08C00C65DEC /* SOSIMPLEUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D90AFC2D1F14E08C00C65DEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90AFC0D1F14E08B00C65DEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90AFC141F14E08B00C65DEC;
+			remoteInfo = SOSIMPLE;
+		};
+		D90AFC381F14E08C00C65DEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90AFC0D1F14E08B00C65DEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D90AFC141F14E08B00C65DEC;
+			remoteInfo = SOSIMPLE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D90AFC151F14E08B00C65DEC /* SOSIMPLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSIMPLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90AFC181F14E08B00C65DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D90AFC1A1F14E08C00C65DEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D90AFC1D1F14E08C00C65DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D90AFC201F14E08C00C65DEC /* SOSIMPLE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SOSIMPLE.xcdatamodel; sourceTree = "<group>"; };
+		D90AFC221F14E08C00C65DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D90AFC251F14E08C00C65DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D90AFC271F14E08C00C65DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90AFC2C1F14E08C00C65DEC /* SOSIMPLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOSIMPLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90AFC301F14E08C00C65DEC /* SOSIMPLETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSIMPLETests.swift; sourceTree = "<group>"; };
+		D90AFC321F14E08C00C65DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90AFC371F14E08C00C65DEC /* SOSIMPLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOSIMPLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90AFC3B1F14E08C00C65DEC /* SOSIMPLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSIMPLEUITests.swift; sourceTree = "<group>"; };
+		D90AFC3D1F14E08C00C65DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D90AFC121F14E08B00C65DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90AFC291F14E08C00C65DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90AFC341F14E08C00C65DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D90AFC0C1F14E08B00C65DEC = {
+			isa = PBXGroup;
+			children = (
+				D90AFC171F14E08B00C65DEC /* SOSIMPLE */,
+				D90AFC2F1F14E08C00C65DEC /* SOSIMPLETests */,
+				D90AFC3A1F14E08C00C65DEC /* SOSIMPLEUITests */,
+				D90AFC161F14E08B00C65DEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D90AFC161F14E08B00C65DEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90AFC151F14E08B00C65DEC /* SOSIMPLE.app */,
+				D90AFC2C1F14E08C00C65DEC /* SOSIMPLETests.xctest */,
+				D90AFC371F14E08C00C65DEC /* SOSIMPLEUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90AFC171F14E08B00C65DEC /* SOSIMPLE */ = {
+			isa = PBXGroup;
+			children = (
+				D90AFC181F14E08B00C65DEC /* AppDelegate.swift */,
+				D90AFC1A1F14E08C00C65DEC /* ViewController.swift */,
+				D90AFC1C1F14E08C00C65DEC /* Main.storyboard */,
+				D90AFC221F14E08C00C65DEC /* Assets.xcassets */,
+				D90AFC241F14E08C00C65DEC /* LaunchScreen.storyboard */,
+				D90AFC271F14E08C00C65DEC /* Info.plist */,
+				D90AFC1F1F14E08C00C65DEC /* SOSIMPLE.xcdatamodeld */,
+			);
+			path = SOSIMPLE;
+			sourceTree = "<group>";
+		};
+		D90AFC2F1F14E08C00C65DEC /* SOSIMPLETests */ = {
+			isa = PBXGroup;
+			children = (
+				D90AFC301F14E08C00C65DEC /* SOSIMPLETests.swift */,
+				D90AFC321F14E08C00C65DEC /* Info.plist */,
+			);
+			path = SOSIMPLETests;
+			sourceTree = "<group>";
+		};
+		D90AFC3A1F14E08C00C65DEC /* SOSIMPLEUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D90AFC3B1F14E08C00C65DEC /* SOSIMPLEUITests.swift */,
+				D90AFC3D1F14E08C00C65DEC /* Info.plist */,
+			);
+			path = SOSIMPLEUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D90AFC141F14E08B00C65DEC /* SOSIMPLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90AFC401F14E08C00C65DEC /* Build configuration list for PBXNativeTarget "SOSIMPLE" */;
+			buildPhases = (
+				D90AFC111F14E08B00C65DEC /* Sources */,
+				D90AFC121F14E08B00C65DEC /* Frameworks */,
+				D90AFC131F14E08B00C65DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOSIMPLE;
+			productName = SOSIMPLE;
+			productReference = D90AFC151F14E08B00C65DEC /* SOSIMPLE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D90AFC2B1F14E08C00C65DEC /* SOSIMPLETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90AFC431F14E08C00C65DEC /* Build configuration list for PBXNativeTarget "SOSIMPLETests" */;
+			buildPhases = (
+				D90AFC281F14E08C00C65DEC /* Sources */,
+				D90AFC291F14E08C00C65DEC /* Frameworks */,
+				D90AFC2A1F14E08C00C65DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90AFC2E1F14E08C00C65DEC /* PBXTargetDependency */,
+			);
+			name = SOSIMPLETests;
+			productName = SOSIMPLETests;
+			productReference = D90AFC2C1F14E08C00C65DEC /* SOSIMPLETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D90AFC361F14E08C00C65DEC /* SOSIMPLEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90AFC461F14E08C00C65DEC /* Build configuration list for PBXNativeTarget "SOSIMPLEUITests" */;
+			buildPhases = (
+				D90AFC331F14E08C00C65DEC /* Sources */,
+				D90AFC341F14E08C00C65DEC /* Frameworks */,
+				D90AFC351F14E08C00C65DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D90AFC391F14E08C00C65DEC /* PBXTargetDependency */,
+			);
+			name = SOSIMPLEUITests;
+			productName = SOSIMPLEUITests;
+			productReference = D90AFC371F14E08C00C65DEC /* SOSIMPLEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90AFC0D1F14E08B00C65DEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Think360Solutions;
+				TargetAttributes = {
+					D90AFC141F14E08B00C65DEC = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					D90AFC2B1F14E08C00C65DEC = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D90AFC141F14E08B00C65DEC;
+					};
+					D90AFC361F14E08C00C65DEC = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D90AFC141F14E08B00C65DEC;
+					};
+				};
+			};
+			buildConfigurationList = D90AFC101F14E08B00C65DEC /* Build configuration list for PBXProject "SOSIMPLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90AFC0C1F14E08B00C65DEC;
+			productRefGroup = D90AFC161F14E08B00C65DEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D90AFC141F14E08B00C65DEC /* SOSIMPLE */,
+				D90AFC2B1F14E08C00C65DEC /* SOSIMPLETests */,
+				D90AFC361F14E08C00C65DEC /* SOSIMPLEUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90AFC131F14E08B00C65DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90AFC261F14E08C00C65DEC /* LaunchScreen.storyboard in Resources */,
+				D90AFC231F14E08C00C65DEC /* Assets.xcassets in Resources */,
+				D90AFC1E1F14E08C00C65DEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90AFC2A1F14E08C00C65DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90AFC351F14E08C00C65DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D90AFC111F14E08B00C65DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90AFC1B1F14E08C00C65DEC /* ViewController.swift in Sources */,
+				D90AFC191F14E08B00C65DEC /* AppDelegate.swift in Sources */,
+				D90AFC211F14E08C00C65DEC /* SOSIMPLE.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90AFC281F14E08C00C65DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90AFC311F14E08C00C65DEC /* SOSIMPLETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D90AFC331F14E08C00C65DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90AFC3C1F14E08C00C65DEC /* SOSIMPLEUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D90AFC2E1F14E08C00C65DEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90AFC141F14E08B00C65DEC /* SOSIMPLE */;
+			targetProxy = D90AFC2D1F14E08C00C65DEC /* PBXContainerItemProxy */;
+		};
+		D90AFC391F14E08C00C65DEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D90AFC141F14E08B00C65DEC /* SOSIMPLE */;
+			targetProxy = D90AFC381F14E08C00C65DEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D90AFC1C1F14E08C00C65DEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90AFC1D1F14E08C00C65DEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D90AFC241F14E08C00C65DEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90AFC251F14E08C00C65DEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90AFC3E1F14E08C00C65DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D90AFC3F1F14E08C00C65DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D90AFC411F14E08C00C65DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SOSIMPLE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThinkStudio.SOSIMPLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D90AFC421F14E08C00C65DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SOSIMPLE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThinkStudio.SOSIMPLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D90AFC441F14E08C00C65DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SOSIMPLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThinkStudio.SOSIMPLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOSIMPLE.app/SOSIMPLE";
+			};
+			name = Debug;
+		};
+		D90AFC451F14E08C00C65DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SOSIMPLETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThinkStudio.SOSIMPLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SOSIMPLE.app/SOSIMPLE";
+			};
+			name = Release;
+		};
+		D90AFC471F14E08C00C65DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SOSIMPLEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThinkStudio.SOSIMPLEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SOSIMPLE;
+			};
+			name = Debug;
+		};
+		D90AFC481F14E08C00C65DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SOSIMPLEUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThinkStudio.SOSIMPLEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SOSIMPLE;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D90AFC101F14E08B00C65DEC /* Build configuration list for PBXProject "SOSIMPLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90AFC3E1F14E08C00C65DEC /* Debug */,
+				D90AFC3F1F14E08C00C65DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90AFC401F14E08C00C65DEC /* Build configuration list for PBXNativeTarget "SOSIMPLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90AFC411F14E08C00C65DEC /* Debug */,
+				D90AFC421F14E08C00C65DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D90AFC431F14E08C00C65DEC /* Build configuration list for PBXNativeTarget "SOSIMPLETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90AFC441F14E08C00C65DEC /* Debug */,
+				D90AFC451F14E08C00C65DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D90AFC461F14E08C00C65DEC /* Build configuration list for PBXNativeTarget "SOSIMPLEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90AFC471F14E08C00C65DEC /* Debug */,
+				D90AFC481F14E08C00C65DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D90AFC1F1F14E08C00C65DEC /* SOSIMPLE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D90AFC201F14E08C00C65DEC /* SOSIMPLE.xcdatamodel */,
+			);
+			currentVersion = D90AFC201F14E08C00C65DEC /* SOSIMPLE.xcdatamodel */;
+			path = SOSIMPLE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D90AFC0D1F14E08B00C65DEC /* Project object */;
+}
