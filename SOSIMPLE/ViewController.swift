@@ -163,6 +163,7 @@ class ViewController: UIViewController,UITextFieldDelegate,HMDiallingCodeDelegat
 //                    {
 //                    UserDefaults.standard.synchronize()
 //                    }
+//
                     self.emailTF.text! = ""
                     self.passwordTF.text! = ""
                 }
