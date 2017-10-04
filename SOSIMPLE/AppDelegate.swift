@@ -8,18 +8,170 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-
+    var profileDataDic = NSDictionary()
+    var startTripString = String()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+         UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = true
+        
+                let userID = UserDefaults.standard.object(forKey: "success")
+                if (userID == nil)
+                {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                    let navigationController = self.window?.rootViewController as! UINavigationController
+                    navigationController.pushViewController(destinationViewController, animated: false)
+                }else
+                {
+                    if UserDefaults.standard.object(forKey: "success") as! String == "LoginSuccess"
+                    {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+                        let navigationController = self.window?.rootViewController as! UINavigationController
+                        navigationController.pushViewController(destinationViewController, animated: false)
+                    }
+                    else
+                    {
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                        let navigationController = self.window?.rootViewController as! UINavigationController
+                        navigationController.pushViewController(destinationViewController, animated: false)
+                    }
+                }
+
+        
+        self.registerPushNotifications()
+        
         return true
     }
+    
+    func registerPushNotifications()
+    {
+        if #available(iOS 10.0, *)
+        {
+            UNUserNotificationCenter.current().delegate = self
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert], completionHandler:
+                { granted, error in
+                if granted {
+                
+                    UIApplication.shared.registerForRemoteNotifications()
+                    
+                } else {
+                        // Unsuccessful...
+                           }
+            })
+        } else {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
 
+    
+    //MARK: Get Device Token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        var deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        deviceTokenString = String(deviceTokenString.replacingOccurrences(of: " ", with: ""))
+        UserDefaults.standard.set(deviceTokenString, forKey: "DeviceToken")
+        UserDefaults.standard.synchronize()
+        print(deviceTokenString)
+        
+//        let token = deviceToken.map({ String(format: "%02.2hhx", $0)}).joined()
+//        print("TOKEN: " + token)
+    }
+    // Called when APNs failed to register the device for push notifications
+    @nonobjc func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // Print the error to console (you should alert the user that registration failed)
+    }
+
+    
+    //MARK: Push Notification Methods
+    func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
+    }
+    
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        completionHandler()
+          print(response.notification.request.content.userInfo)
+        _ = response.notification.request.content.userInfo as NSDictionary
+        
+        let userID = UserDefaults.standard.object(forKey: "success")
+        if (userID == nil)
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let navigationController = self.window?.rootViewController as! UINavigationController
+            navigationController.pushViewController(destinationViewController, animated: false)
+        }else
+        {
+            if UserDefaults.standard.object(forKey: "success") as! String == "LoginSuccess"
+            {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+                let navigationController = self.window?.rootViewController as! UINavigationController
+                navigationController.pushViewController(destinationViewController, animated: false)
+            }
+            else
+            {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                let navigationController = self.window?.rootViewController as! UINavigationController
+                navigationController.pushViewController(destinationViewController, animated: false)
+            }
+        }
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler([.alert, .badge, .sound])
+         print(notification.request.content.userInfo)
+        let dic = notification.request.content.userInfo as NSDictionary
+        print(dic)
+//      if let aps = dic["aps"] as? [String: Any] {
+//      print(aps)
+//      }
+        
+        let userID = UserDefaults.standard.object(forKey: "success")
+        if (userID == nil)
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let navigationController = self.window?.rootViewController as! UINavigationController
+            navigationController.pushViewController(destinationViewController, animated: false)
+        }else
+        {
+            if UserDefaults.standard.object(forKey: "success") as! String == "LoginSuccess"
+            {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+                let navigationController = self.window?.rootViewController as! UINavigationController
+                navigationController.pushViewController(destinationViewController, animated: false)
+            }
+            else
+            {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                let navigationController = self.window?.rootViewController as! UINavigationController
+                navigationController.pushViewController(destinationViewController, animated: false)
+            }
+        } 
+    }
+   
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -43,9 +195,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
 
-    // MARK: - Core Data stack
+// MARK: - Core Data stack
 
+    @available(iOS 10.0, *)
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -76,18 +231,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data Saving support
 
     func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        if #available(iOS 10.0, *) {
+            let context = persistentContainer.viewContext
+            if context.hasChanges {
+                do {
+                    try context.save()
+                } catch {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
             }
+
+        } else {
+            // Fallback on earlier versions
         }
     }
 
 }
-
